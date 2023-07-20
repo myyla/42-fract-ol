@@ -26,7 +26,7 @@ This project is not called fract’oil and accordingly has no relation to hydrau
     - [Types of fractals?](#types-fractal)
     - [Fractal Dimension?](#dimension-fractal)
     - [Fractal Examples?](#examples-fractals)
-    - [Julia Set?](#julia-Set)
+    - [Julia Set?](#julia-set)
     - [Mandelbort Set?](#mandelbort-Set)
   
 ## Introduction
@@ -107,6 +107,9 @@ Fractals come in various types, each with its unique characteristics and generat
   ![menger (1)](https://github.com/myyla/42-fract-ol/assets/96894475/e37f18f2-27d5-4f5a-ad2b-399dc0ed353b)
 
 These are just a few examples of the many types of fractals that exist. 
+
+### <a name="julia-set">Julia Set?</a> 
+
 
 
   
