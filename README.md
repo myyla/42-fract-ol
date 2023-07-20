@@ -1,5 +1,5 @@
-# 42cursus - Fract'ol
-  Computer Graphics Fractals. 
+# 42cursus - Fract'ol : 
+          Computer Graphics Fractals 🔎
 
 ## Summary: 
   This project is about creating graphically beautiful fractals.
@@ -25,4 +25,17 @@ This project is not called fract’oil and accordingly has no relation to hydrau
     - [What is the term fractal?](#fractal)
     - [Julia Set?](#Julia-Set)
     - [Mandelbort Set?](#Mandelbort-Set)
-    - 
+  
+## Introduction
+  The term fractal was first used by mathematician Benoit Mandelbrot in 1974. He based it on the Latin word fractus which means "broken" or "fractured".
+A fractal is an abstract mathematical object, like a curve or a surface, which pattern remains the same at every scale.
+Various natural phenomena – like the romanesco cabbage – have some fractal features.
+
+
+  ![OIP](https://github.com/myyla/42-fract-ol/assets/96894475/ae4836cc-a6de-46be-af32-2722f8df6781)
+
+### <a name="fractal">What is the term fractal?</a>
+ - A simple definition of the term "fractal" is a complex geometric shape or pattern that exhibits self-similarity at different scales. In other words, when you zoom in or out on a fractal, you will see similar patterns repeated at various levels of magnification. Fractals have intricate and often beautiful designs and are commonly used in computer graphics and art. They are generated through mathematical algorithms and have applications in various fields, including computer graphics, simulations, and natural landscapes generation.
+- Complex picture created using iteration and single formula
+  Ex: Mountains - clouds 
+
