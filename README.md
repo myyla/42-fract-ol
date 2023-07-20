@@ -23,11 +23,11 @@ This project is not called fract’oil and accordingly has no relation to hydrau
   Watch this First! : https://www.youtube.com/watch?v=fMBi2ohn_Co
 1. [Introduction](#introduction)
     - [What is the term fractal?](#fractal)
-    - [Types of fractals?](#Types-fractal)
-    - [Fractal Dimension?](#Dimension-fractal)
-    - [Fractal Examples?](#Examples-fractals)
-    - [Julia Set?](#Julia-Set)
-    - [Mandelbort Set?](#Mandelbort-Set)
+    - [Types of fractals?](#types-fractal)
+    - [Fractal Dimension?](#dimension-fractal)
+    - [Fractal Examples?](#examples-fractals)
+    - [Julia Set?](#julia-Set)
+    - [Mandelbort Set?](#mandelbort-Set)
   
 ## Introduction
   The term fractal was first used by mathematician Benoit Mandelbrot in 1974. He based it on the Latin word fractus which means "broken" or "fractured".
@@ -44,19 +44,19 @@ Various natural phenomena – like the romanesco cabbage – have some fractal f
   Ex: Mountains - clouds
 
 
-### <a name="Types-fractal">Types of fractals?</a>
+### <a name="types-fractal">Types of fractals?</a>
 
 - Self similar: those fractals have parts as scaled down version of entire object.
 - Self affine: have parts formed with different scaling parameters in different coordinate directions.
 - Invarient: formed with non linear transformations.
 
-### <a name="Dimenson-fractal">Fractal Dimension?</a> 
+### <a name="dimenson-fractal">Fractal Dimension?</a> 
 
  - Fractal dimension is measure of roughness or fragmentation of the object
  - The more jagged is the looking of the object the bigger is the fractal dimension
  - We can calculate fractal Dimension D using some iterative procedures.
 
-### <a name="Examples-fractals">Fractal Examples?</a> 
+### <a name="examples-fractals">Fractal Examples?</a> 
 
 Fractals come in various types, each with its unique characteristics and generation methods. Some of the popular types of fractals include:
 
