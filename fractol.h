@@ -6,7 +6,7 @@
 /*   By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 06:13:41 by amtouham          #+#    #+#             */
-/*   Updated: 2023/07/21 06:46:25 by amtouham         ###   ########.fr       */
+/*   Updated: 2023/07/21 08:31:10 by amtouham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@
 # include <math.h>
 
 /*  Dimensions	*/
-# define WIDTH 900
-# define HEIGHT 900
+# define WINDOW_WIDTH 900
+# define WINDOW_HEIGHT 900
 # define MAX_ITERATIONS 60
 
 /*  Fractal sets	*/

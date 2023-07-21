@@ -6,7 +6,7 @@
 #    By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/20 10:32:25 by amtouham          #+#    #+#              #
-#    Updated: 2023/07/21 06:41:22 by amtouham         ###   ########.fr        #
+#    Updated: 2023/07/21 19:34:57 by amtouham         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ NAME	= fractol
 
 # Compiler
 CC		= cc
-FLAGS	= -Ofast -Wall -Wextra -Werror
+FLAGS	= -Ofast -Wall -Wextra -Werror -g -fsanitize=address
 
 # Minilibx
 MLX			= -lmlx -framework OpenGL -framework AppKit
@@ -37,7 +37,7 @@ OBJS		=  $(SRCS:.c=.o)
 
 
 $(NAME): $(OBJS) 
-	@$(CC) $(OBJS) $(MLX) -o $(NAME)
+	@$(CC) $(OBJS) $(FLAGS) $(MLX) -o $(NAME)
 
 %.o : %.c $(HEADER)
 	@echo "$(GREEN)Building fractol⏳️...$(CYAN)"
