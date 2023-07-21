@@ -6,10 +6,13 @@
 /*   By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 12:46:24 by amtouham          #+#    #+#             */
-/*   Updated: 2023/07/20 14:16:06 by amtouham         ###   ########.fr       */
+/*   Updated: 2023/07/21 06:36:54 by amtouham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fractol.h"
+#include "../fractol.h"
 
-#include
+int main()
+{
+	printf("[from Makefile]\n");
+}

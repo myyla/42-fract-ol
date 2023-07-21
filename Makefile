@@ -6,7 +6,7 @@
 #    By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/20 10:32:25 by amtouham          #+#    #+#              #
-#    Updated: 2023/07/20 12:43:08 by amtouham         ###   ########.fr        #
+#    Updated: 2023/07/21 06:41:22 by amtouham         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,13 +28,16 @@ MLX			= -lmlx -framework OpenGL -framework AppKit
 HEADER 		= fractol.h
 
 # Sources
-SRC_PATH	= src/main
-SRCS		= $(addsuffix .c, $(SRC_PATH)) 
+SRCS			= src/fractol.c
 
 # Objects
-OBJS		= $(addsuffix .o, $(SRC_PATH)
+OBJS		=  $(SRCS:.c=.o)
 
 # Rules
+
+
+$(NAME): $(OBJS) 
+	@$(CC) $(OBJS) $(MLX) -o $(NAME)
 
 %.o : %.c $(HEADER)
 	@echo "$(GREEN)Building fractol⏳️...$(CYAN)"
@@ -47,7 +50,7 @@ all: $(NAME)
 bonus: all
 
 clean:
-	@echo "$(GREEN)Removing .o object files🗑...$(CYAN)"
+	@echo "$(CYAN)Removing .o object files🗑...$(CYAN)"
 	@rm -rf $(OBJS)
 
 fclean: clean
