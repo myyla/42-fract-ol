@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fractol.h                                          :+:      :+:    :+:   */
+/*   render.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/21 06:13:41 by amtouham          #+#    #+#             */
-/*   Updated: 2023/07/21 08:31:10 by amtouham         ###   ########.fr       */
+/*   Created: 2023/07/24 17:14:34 by amtouham          #+#    #+#             */
+/*   Updated: 2023/07/24 17:25:35 by amtouham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRACTOL_H
-#define FRACTOL_H
+# include "fractol.h"
 
-# include "mlx.h"
-# include <stdio.h>
-# include <stdlib.h>
-# include <math.h>
+void	render(t_data *data)
+{
+	int		x;
+	int		y;
 
-/*  Dimensions	*/
-# define WINDOW_WIDTH 900
-# define WINDOW_HEIGHT 900
-# define MAX_ITERATIONS 60
-
-/*  Fractal sets	*/
-# define MANDELBROT 1
-# define JULIA 2
-# define BURNING_SHIP 3
-# define TRICORN 4
-# define MANDELBOX 5
-
-#endif
+	y = -1;
+	while (++y < WINDOW_HEIGHT)
+	{
+		x = -1;
+		while (++x < WINDOW_WIDTH)
+			render_fractal(data, x, y);
+	}
+	mlx_put_image_to_window(data->mlx, data->mlx_win, data->img, 0, 0);
+}

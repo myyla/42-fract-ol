@@ -1,0 +1,21 @@
+
+
+
+--------------------------------------------------------------------- set_pixel_color ---------------------------------------------------------------------------
+
++The function sets the color of the specified pixel in the image buffer by modifying the four bytes corresponding
+to the pixel's location in memory. 
+
++The image buffer is assumed to be stored in RGBA format, where each pixel is represented by four consecutive 
+bytes in memory, in the order red, green, blue, alpha.
+
++The function uses simple arithmetic and bit-shifting operations to set the four bytes corresponding to the pixel's 
+location in memory.Specifically:
+
+	*data->buf[x * 4 + y * WINDOW_WIDTH * 4] = color;: sets the red component of the pixel to the least significant byte of the color argument.
+	*data->buf[x * 4 + y * WINDOW_WIDTH * 4 + 1] = color >> 8;: sets the green component of the pixel to the second least significant byte of the color argument, 
+																shifted 8 bits to the right.
+	*data->buf[x * 4 + y * WINDOW_WIDTH * 4 + 2] = color >> 16;: sets the blue component of the pixel to the third least significant byte of the color argument, 
+																shifted 16 bits to the right.
+	*data->buf[x * 4 + y * WINDOW_WIDTH * 4 + 3] = color >> 24;: sets the alpha component of the pixel to the most significant byte of the color argument, 
+																shifted 24 bits to the right.

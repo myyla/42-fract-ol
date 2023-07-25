@@ -1,0 +1,80 @@
+/* +++++++++++++++++++++++ MANDELBROT FORMULA : Z{n+1} = Z{n} ^2 + C ++++++++++++++++++++++++++++++++++++++++++++*/
+/*	C is a complex number C = a + bi */
+/* 	Soit Z = za + zbi */
+/* 	Z{n}^2 = za^2 - zb^2 + (2 * za * zb)i */
+/*	Re = a^2 - b^2 */
+/*	Img = 2ab */
+/*	The mandelbrot function takes two double arguments a and b representing the real and imaginary parts of a complex number*/
+/*	ca and cb represents the complex number c in the mandelbrot set  */
+/*-------------------------------------------------------------------------------------------------------------------------*/
+/*	The Mandelbrot set is typically computed using an iterative algorithm, such as the one shown in the code you provided. 
+	The algorithm iterates a maximum number of times for each point and checks whether the magnitude of the complex number becomes
+	larger than a certain threshold. If the magnitude does not exceed the threshold after the maximum number of iterations, 
+	then the point is considered to belong to the Mandelbrot set.
+	This approach is computationally efficient and works well in practice, because it is able to capture the self-similar structure 
+	of the Mandelbrot set at different scales. By varying the threshold and the maximum number of iterations, it is possible to control 
+	the level of detail and accuracy of the computed set.*/
+	
+	/*	++++++++++++++++++++++++++++++++++	MAX-ITERATION / LEVEL OF DETAIL AND ACCURACY CONTROL +++++++++++++++++++++++++++++++++++++++++++++++++*/
+	/*																																				*/
+	/*	The reason why 100 is chosen as the maximum number of iterations is that it is a reasonable number of iterations to ensure that the 
+		code has converged to a solution*/
+	/* 	In practice, the actual number of iterations required to converge may be much smaller or larger than 100, depending on the location of
+		the point in the complex plane.*/
+	/*	The maximum number of iterations determines how many times the iterative algorithm is applied to each point in the complex plane. 
+		By changing the value of the maximum number of iterations, you can control the level of detail and accuracy of the computed set.*/
+	/*																																				*/
+	/*++++++++++++++++++++++++++++++++++++   MAGNITUDE / TRESHOLD / INCLUDE OR EXCLUDE MORE POINTS IN THE SET  ++++++++++++++++++++++++++++++++++*/
+	
+	/* In the context of the Mandelbrot set, the magnitude of the complex number is used to determine whether the iterative algorithm has 
+		converged or diverged. If the magnitude of the complex number becomes larger than a certain threshold, then the algorithm is 
+		considered to have diverged and the point is not a member of the Mandelbrot set.*/
+	/*	Geometrically, the magnitude of a complex number represents the distance between the point corresponding to the complex number and
+	 	the origin in the complex plane. For example, if z = 3 + 4i, then the magnitude of z is:
+		|z| = sqrt(3^2 + 4^2) = 5 */
+	/*	The threshold is used to determine whether the iterative algorithm has converged or diverged. If the magnitude of the complex number 
+		(i.e., the sum of the squares of zx and zy) becomes larger than the threshold, then the algorithm is considered to have diverged and 
+		the point is not a member of the Mandelbrot set.
+		By changing the value of the threshold, you can include or exclude more points in the set.
+																																				
+	/*+++++++++++++++++++++++++++++++++++++++++++++++            CONCLUSION             +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+																																				*/
+	/*	Increasing the number of iterations will result in a more detailed set, but will also increase the computation time. 
+		Decreasing the number of iterations will result in a less detailed set, but will reduce the computation time.
+		Therefore, by adjusting the values of the threshold and maximum number of iterations in this code, you can generate 
+		different visualizations of the Mandelbrot set with different levels of detail and accuracy.
+		For example, you could increase the value of max_iterations to 200 and decrease the value of threshold
+		to 2.0 to create a more detailed and accurate set
+		Or you could decrease the value of max_iterations to 50 and increase the value of threshold to 8.0 
+		to create a less detailed and less accurate set
+	*/
+
+	--------------- CONTROL LEVEL OF DETAIL AND ACCURACY --> CODE TO IMPLEMENT --------------
+			int width = 640;
+			int height = 480;
+			double x_min = -2;
+			double x_max = 1;
+			double y_min = -1;
+			double y_max = 1;
+			int max_iterations = 100; // default value
+			double threshold = 4.0; // default value
+
+			for (int x = 0; x < width; x++) {
+				for (int y = 0; y < height; y++) {
+					double cx = x_min + x * (x_max - x_min) / (width - 1);
+					double cy = y_min + y * (y_max - y_min) / (height - 1);
+					double zx = 0;
+					double zy = 0;
+					int i;
+					for (i = 0; i < max_iterations; i++) {
+						double new_zx = zx * zx - zy * zy + cx;
+						double new_zy = 2 * zx * zy + cy;
+						zx = new_zx;
+						zy = new_zy;
+						if (zx * zx + zy * zy > threshold) {
+							break;
+						}
+					}
+					// color the pixel based on the number of iterations
+				}
+			}
