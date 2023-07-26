@@ -6,7 +6,7 @@
 /*   By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 06:13:41 by amtouham          #+#    #+#             */
-/*   Updated: 2023/07/24 18:16:50 by amtouham         ###   ########.fr       */
+/*   Updated: 2023/07/26 03:40:06 by amtouham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <math.h>
 # include <stdio.h>
 # include <stdlib.h>
+# include <unistd.h>
 
 /*  Dimensions	*/
 # define WINDOW_WIDTH 900
@@ -52,7 +53,12 @@ typedef struct s_zpoint{
 }t_zpoint;
 
 /*	Functions' Prototypes	*/
+int	ft_strncmp(const char *s1, const char *s2, size_t n);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putstr_fd(char *s, int fd);
+size_t	ft_strlen(const char *s);
 int mandelbrot(double a, double b);
 void generate_mandelbrot(t_data image);
+
 
 #endif
