@@ -6,7 +6,7 @@
 /*   By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 07:24:12 by amtouham          #+#    #+#             */
-/*   Updated: 2023/07/25 22:00:25 by amtouham         ###   ########.fr       */
+/*   Updated: 2023/07/28 09:32:56 by amtouham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@ int mandelbrot(double a, double b)
 	t_zpoint	z;
 	t_zpoint	c;
 	t_zpoint	new_z;
-	int	i;
+	double	i;
 
 	z.a = 0;
 	z.b = 0;
 	c.a = a;
 	c.b = b;
 	i = 0;
-	while(i++ < 100){
+	while(i++ < MAX_ITERATIONS){
 		new_z.a  = z.a * z.a - z.b * z.b + c.a;
 		new_z.b = 2 * z.a * z.b + c.b;
 		z.a = new_z.a;
@@ -45,24 +45,27 @@ int mandelbrot(double a, double b)
 	by the width of the image (WIDTH), adding the column (i), and then multiplying by 3, because each pixel has 
 	three color components (red, green, and blue).*/
 
-void generate_mandelbrot(char *img){
-	t_zpoint z;
-	int	i;
-	int	j;
-	int	index;
-	int	value;
+// void generate_mandelbrot(char *img){
+// 	t_zpoint z;
+// 	int	i;
+// 	int	j;
+// 	int	index;
+// 	int	value;
 	
-	i = 0;
-	j = 0;
-	while(j++ < WINDOW_HEIGHT)
-	{
-		while(i++ < WINDOW_WIDTH)
-		{
-			z.a = (double)i / WINDOW_WIDTH * 4.0 - 2.5;
-			z.b = (double)j / WINDOW_HEIGHT * 4.0 - 2.0;
-			index = (j * WINDOW_WIDTH + i) * 3;
-			value = mandelbrot(z.a,z.b);
-			img[index] = 
-		}
-	}
-}
+// 	i = 0;
+// 	j = 0;
+// 	while(j++ < WINDOW_HEIGHT)
+// 	{
+// 		while(i++ < WINDOW_WIDTH)
+// 		{
+// 			z.a = (double)i / WINDOW_WIDTH * 4.0 - 2.5;
+// 			z.b = (double)j / WINDOW_HEIGHT * 4.0 - 2.0;
+// 			index = (j * WINDOW_WIDTH + i) * 3;
+// 			value = mandelbrot(z.a,z.b);
+// 			img[index] = 
+			// image[index] = value * 5;
+			// image[index + 1] = value * 10;
+			// image[index + 2] = value * 20;
+// 		}
+// 	}
+// }
