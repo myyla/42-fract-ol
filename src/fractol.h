@@ -6,7 +6,7 @@
 /*   By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 06:13:41 by amtouham          #+#    #+#             */
-/*   Updated: 2023/07/27 15:26:51 by amtouham         ###   ########.fr       */
+/*   Updated: 2023/07/28 22:13:41 by amtouham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@
 /*  Dimensions	*/
 # define WINDOW_WIDTH 900
 # define WINDOW_HEIGHT 900
-# define MAX_ITERATIONS 60
 
 /*  Fractal sets	*/
 # define MANDELBROT 1
@@ -30,6 +29,11 @@
 # define KOCH 3
 
 /*	Structures	*/
+typedef struct s_zpoint{
+	double	a;
+	double	b;
+}t_zpoint;
+
 typedef struct	s_data {
 	void	*mlx;
 	void	*mlx_win;
@@ -46,21 +50,23 @@ typedef struct	s_data {
 	int		my_color;
 	int		set;
 	int		iter;
+	t_zpoint julia_c;
 }t_data;
 
-typedef struct s_zpoint{
-	double	a;
-	double	b;
-}t_zpoint;
-
 /*	Functions' Prototypes	*/
+char	*ft_strchr(const char *s, int c);
+double ft_float_atoi(const char *str);
+int	ft_atoi(const char *str);
+int	ft_strncmp(const char *s1, const char *s2, size_t n);
+int	julia(t_data *data, double a, double b);
+int	help_msg(void);
+int mandelbrot(t_data *data, double a, double b);
+int	set_pixel_color(t_data *data, int value, int x, int y, int color);
 size_t	ft_strlen(const char *s);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putstr_fd(char *s, int fd);
-int	ft_strncmp(const char *s1, const char *s2, size_t n);
-int mandelbrot(double a, double b);
-void	render(t_data *data);
+void	get_julia_c_values(t_data *data, char **av);
 void	initialize(t_data *data);
-int	set_pixel_color(t_data *data, int value, int x, int y, int color);
+void	render(t_data *data);
 
 #endif

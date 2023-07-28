@@ -6,29 +6,11 @@
 /*   By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 12:46:24 by amtouham          #+#    #+#             */
-/*   Updated: 2023/07/28 09:11:27 by amtouham         ###   ########.fr       */
+/*   Updated: 2023/07/28 22:42:15 by amtouham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
-
-int	help_msg(void)
-{
-	ft_putendl_fd("\n+======================================================================+", 1);
-	ft_putendl_fd("|                         FRACT'OL-HELP	                               |", 1);
-	ft_putendl_fd("+======================================================================+\n", 1);
-	ft_putendl_fd("+			Invalid Choice !!!			       +\n", 1);
-	ft_putendl_fd("+	1- For Mandelbrot Set ,Plz Use :   \e[36m./fract-ol mandelbrot\e[0m       +\n", 1);
-	ft_putendl_fd("+	2- For Random Julia Set ,Plz Use : \e[36m./fract-ol julia\e[0m 	       +\n", 1);
-	ft_putendl_fd("+	3- For A Specified Julia Set ,Plz Use :\e[36m./fract-ol julia x y\e[0m    +\n", 1);
-	ft_putendl_fd("+	4- For Koch-Snowflake Set ,Plz Use : \e[36m./fract-ol koch\e[0m           +\n", 1);
-	ft_putendl_fd("+ N.B: *For Julia, you may specify starting values!                    +\n", 1);
-	ft_putendl_fd("+      *Values must be between -2.0 and 2.0 and must contain           +\n", 1);
-	ft_putendl_fd("+        a decimal point.					       +\n", 1);
-	ft_putendl_fd("\e[36m+      *Usage example:	./fractol julia                                +\n\n+\t\t\t./fractol julia 0.285 0.01t                    +\e[0m", 1);
-	return(exit (0),0);
-}
-
 
 int	main(int ac, char **av)
 {
@@ -39,9 +21,20 @@ int	main(int ac, char **av)
 	if (ac == 2 && !ft_strncmp("mandelbrot", av[1], ft_strlen(av[1])))
 		data.set = MANDELBROT;
 	else if (ac == 2 && !ft_strncmp("julia", av[1], ft_strlen(av[1])))
-		data.set = JULIA;
+		{
+			data.set = JULIA;
+			data.julia_c.a = -0.8;
+			data.julia_c.b = 0.156;
+		}
 	else if (ac == 2 && !ft_strncmp("koch", av[1], ft_strlen(av[1])))
 		data.set = KOCH;
+	else if (ac == 4 && !ft_strncmp("julia", av[1], ft_strlen(av[1])))
+		{
+			data.set = JULIA;
+			if (!ft_strchr(av[2], '.') || !ft_strchr(av[3], '.'))
+				help_msg();
+			get_julia_c_values(&data,av);
+		}
 	else
 		help_msg();
 	initialize(&data);

@@ -6,7 +6,7 @@
 /*   By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/24 15:06:09 by amtouham          #+#    #+#             */
-/*   Updated: 2023/07/28 09:35:59 by amtouham         ###   ########.fr       */
+/*   Updated: 2023/07/28 21:18:33 by amtouham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,13 @@
 */
 int set_pixel_color(t_data *data, int value, int x, int y, int color)
 {
-	if (value >= MAX_ITERATIONS)
+	if (value >= data->iter)
 		data->color = 0;
 	else
 		data->color = data->my_color* value;
+	return(color);
+}
 	// data->addr[x * 4 + y * WINDOW_WIDTH * 4] = color;
 	// data->addr[x * 4 + y * WINDOW_WIDTH * 4 + 1] = color >> 8;
 	// data->addr[x * 4 + y * WINDOW_WIDTH * 4 + 2] = color >> 16;
 	// data->addr[x * 4 + y * WINDOW_WIDTH * 4 + 3] = color >> 24;
-	return(color);
-}

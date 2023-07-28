@@ -6,7 +6,7 @@
 #    By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/20 10:32:25 by amtouham          #+#    #+#              #
-#    Updated: 2023/07/27 15:26:09 by amtouham         ###   ########.fr        #
+#    Updated: 2023/07/28 19:57:36 by amtouham         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ MLX			= -lmlx -framework OpenGL -framework AppKit
 HEADER 		= fractol.h
 
 # Sources
-SRCS			= src/sets/mandelbrot.c src/color.c src/fractol.c src/init.c src/render.c src/utils.c 
+SRCS			= src/color.c src/fractol.c src/help.c src/init.c src/render.c src/sets.c src/utils.c 
 
 # Objects
 OBJS		=  $(SRCS:.c=.o)

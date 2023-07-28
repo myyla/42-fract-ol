@@ -6,7 +6,7 @@
 /*   By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/24 17:14:34 by amtouham          #+#    #+#             */
-/*   Updated: 2023/07/28 10:12:17 by amtouham         ###   ########.fr       */
+/*   Updated: 2023/07/28 20:58:48 by amtouham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,13 @@ void	generate_fractal(t_data *data, int x, int y)
 	int	value;
 	
 	if (data->set == MANDELBROT)
-		value = mandelbrot(init_x(x, data->max_x, data->min_x),
+		value = mandelbrot(data, init_x(x, data->max_x, data->min_x),
 				init_y(y, data->max_y, data->min_y));
-	// else if (data->set == JULIA)
-	// 	value = julia(init_coord(x, data->max_x, data->min_x),
-	// 			init_coord(y, data->max_y, data->min_y));
+	else if (data->set == JULIA)
+	 	value = julia(data,init_x(x, data->max_x, data->min_x),
+				init_y(y, data->max_y, data->min_y));
 	// else
-	// 	value = kosh(init_coord(x, data->max_x, data->min_x),
+	// 	value = kosh(init_x(x, data->max_x, data->min_x),
 	// 			init_coord(y, data->max_y, data->min_y));
 	my_mlx_pixel_put(data, x, y, set_pixel_color(data, value, x, y, data->color));
 }
