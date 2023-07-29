@@ -6,7 +6,7 @@
 /*   By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/29 08:32:10 by amtouham          #+#    #+#             */
-/*   Updated: 2023/07/29 12:05:04 by amtouham         ###   ########.fr       */
+/*   Updated: 2023/07/29 12:53:58 by amtouham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,13 +49,11 @@ int	press_key(int keycode, t_data *data)
 	if (keycode == 53)
 		close_window(data);
 	key_lrud(keycode, data);
-	// else if (keycode == 49)
-	// 	mlx->lock_evnt *= -1 ;
-	// else if (keycode == 8)
-	// {
-	// 	data->color_index += 10;
-	// 	render(data);
-	// }
+	if (keycode == 8)
+	{
+		data->color_index += 10;
+		render(data);
+	}
 	return (0);
 }
 
