@@ -6,7 +6,7 @@
 /*   By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 19:54:46 by amtouham          #+#    #+#             */
-/*   Updated: 2023/07/28 20:56:45 by amtouham         ###   ########.fr       */
+/*   Updated: 2023/07/29 08:03:34 by amtouham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,3 +56,8 @@ int	julia(t_data *data, double a, double b)
 	}
 	return (0);
 }
+
+// int kosh(t_data *data)
+// {
+	
+// }

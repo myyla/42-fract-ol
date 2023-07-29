@@ -6,7 +6,7 @@
 /*   By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 03:07:35 by amtouham          #+#    #+#             */
-/*   Updated: 2023/07/28 22:13:03 by amtouham         ###   ########.fr       */
+/*   Updated: 2023/07/29 08:03:08 by amtouham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,8 +78,6 @@ int	ft_atoi(const char *str)
 		s = 1 - 2 * (str[i++] == '-');
 	while (str[i] && str[i] >= '0' && str[i] <= '9')
 		res = 10 * res + str[i++] - '0';
-	if ((res * s) < -2147483648 || (res * s) > 2147483647)
-		help_msg();
 	return (res * s);
 }
 

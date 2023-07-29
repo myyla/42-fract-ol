@@ -6,7 +6,7 @@
 /*   By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 10:12:46 by amtouham          #+#    #+#             */
-/*   Updated: 2023/07/28 22:41:45 by amtouham         ###   ########.fr       */
+/*   Updated: 2023/07/29 11:26:53 by amtouham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ void	initialize(t_data *data)
 	data->min_y = -2.0;
 	data->max_y = 2.0;
 	data->my_color = 16724019;
+	data->zoom = 0.5;
+	data->key_lrud = 0.5;
 }
 
 void	get_julia_c_values(t_data *data, char **av)

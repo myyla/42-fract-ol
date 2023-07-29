@@ -6,7 +6,7 @@
 /*   By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 12:46:24 by amtouham          #+#    #+#             */
-/*   Updated: 2023/07/28 22:42:15 by amtouham         ###   ########.fr       */
+/*   Updated: 2023/07/29 11:59:47 by amtouham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,9 @@ int	main(int ac, char **av)
 		help_msg();
 	initialize(&data);
 	render(&data);
-	// // mlx_mouse_hook(data.mlx_win, mouse_move, &data);
-	// // mlx_hook(data.mlx_win, 2, 0, manage_key, &data);
-	// // mlx_hook(data.mlx_win, 6, 0, mouse_motion, &data);
-	// // mlx_hook(data.mlx_win, 17, 0, destroy, &data);
+	// mlx_mouse_hook(data.mlx_win, mouse_move, &data);
+	mlx_hook(data.mlx_win, 2, 0, press_key, &data);
+	// mlx_hook(data.mlx_win, 6, 0, mouse_motion, &data);
+	mlx_hook(data.mlx_win, 17, 0, close_window, &data);
 	mlx_loop(data.mlx);
 }
