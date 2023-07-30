@@ -6,7 +6,7 @@
 #    By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/20 10:32:25 by amtouham          #+#    #+#              #
-#    Updated: 2023/07/29 09:42:01 by amtouham         ###   ########.fr        #
+#    Updated: 2023/07/30 09:48:55 by amtouham         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ NAME	= fractol
 
 # Compiler
 CC		= cc
-FLAGS	= -Ofast -Wall -Wextra -Werror -g -fsanitize=address
+FLAGS	= -Ofast -Wall -Wextra -Werror #-g -fsanitize=address 
 
 # Minilibx
 MLX			= -lmlx -framework OpenGL -framework AppKit
@@ -28,7 +28,7 @@ MLX			= -lmlx -framework OpenGL -framework AppKit
 HEADER 		= fractol.h
 
 # Sources
-SRCS			= src/color.c src/fractol.c src/help.c src/hook_key.c src/init.c src/render.c src/sets.c src/utils.c 
+SRCS			= src/color.c src/fractol.c src/help.c src/hook_key.c src/hook_mouse.c src/init.c src/render.c src/sets.c src/utils.c 
 
 # Objects
 OBJS		=  $(SRCS:.c=.o)

@@ -6,16 +6,12 @@
 /*   By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/29 08:32:10 by amtouham          #+#    #+#             */
-/*   Updated: 2023/07/29 12:53:58 by amtouham         ###   ########.fr       */
+/*   Updated: 2023/07/30 07:46:17 by amtouham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "fractol.h"
 
-// void	zoom(t_data	*data)
-// {
-	
-// }
 static void	key_lrud(int keycode, t_data *data )
 {
 	if (keycode == 123)
@@ -30,16 +26,16 @@ static void	key_lrud(int keycode, t_data *data )
 		data->min_x -= data->key_lrud;
 		render(data);
 	}
-	else if (keycode == 126)
-	{
-		data->max_y -= data->key_lrud;
-		data->min_y -= data->key_lrud;
-		render(data);
-	}
 	else if (keycode == 125)
 	{
 		data->max_y += data->key_lrud;
 		data->min_y += data->key_lrud;
+		render(data);
+	}
+	else if (keycode == 126)
+	{
+		data->max_y -= data->key_lrud;
+		data->min_y -= data->key_lrud;
 		render(data);
 	}
 }

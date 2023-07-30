@@ -6,7 +6,7 @@
 /*   By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 06:13:41 by amtouham          #+#    #+#             */
-/*   Updated: 2023/07/29 13:27:55 by amtouham         ###   ########.fr       */
+/*   Updated: 2023/07/30 09:38:04 by amtouham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,12 +45,12 @@ typedef struct	s_data {
 	double	max_y;
 	double	zoom;
 	double	key_lrud;
+	double	color_index;
 	int		bits_per_pixel;
 	int		line_length;
 	int		endian;
 	int		color;
 	int		my_color;
-	double	color_index;
 	int		set;
 	int		iter;
 	t_zpoint julia_c;
@@ -58,7 +58,9 @@ typedef struct	s_data {
 
 /*	Functions' Prototypes	*/
 char	*ft_strchr(const char *s, int c);
-double ft_float_atoi(const char *str);
+double	ft_float_atoi(const char *str);
+double	init_x(double x, double max_x, double min_x);
+double	init_y(double y, double max_y, double min_y);
 int	close_window(t_data *data);
 int	ft_atoi(const char *str);
 int	ft_strncmp(const char *s1, const char *s2, size_t n);
@@ -67,6 +69,7 @@ int	help_msg(void);
 int mandelbrot(t_data *data, double a, double b);
 int	press_key(int keycode, t_data *data);
 int	set_pixel_color(t_data *data, int value, int x, int y, int color);
+int scroll_updown(int keycode, int x, int y, t_data *data);
 size_t	ft_strlen(const char *s);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putstr_fd(char *s, int fd);
