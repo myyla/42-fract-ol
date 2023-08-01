@@ -19,3 +19,8 @@ location in memory.Specifically:
 																shifted 16 bits to the right.
 	*data->buf[x * 4 + y * WINDOW_WIDTH * 4 + 3] = color >> 24;: sets the alpha component of the pixel to the most significant byte of the color argument, 
 																shifted 24 bits to the right.
+
+																*+EQUATION -ANAS
+			r = 7 * value * (cos(color) + sin(color));
+			b = 3 * value * (sin(color) + cos(color));
+			g = (value * (sin(color) + cos(color) - 1));

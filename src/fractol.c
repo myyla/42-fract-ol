@@ -6,7 +6,7 @@
 /*   By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 12:46:24 by amtouham          #+#    #+#             */
-/*   Updated: 2023/07/30 09:32:45 by amtouham         ###   ########.fr       */
+/*   Updated: 2023/07/30 16:01:40 by amtouham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ int	main(int ac, char **av)
 			data.julia_c.a = -0.8;
 			data.julia_c.b = 0.156;
 		}
-	else if (ac == 2 && !ft_strncmp("koch", av[1], ft_strlen(av[1])))
-		data.set = KOCH;
+	else if (ac == 2 && !ft_strncmp("tricorn", av[1], ft_strlen(av[1])))
+		data.set = TRICORN;
 	else if (ac == 4 && !ft_strncmp("julia", av[1], ft_strlen(av[1])))
 		{
 			data.set = JULIA;

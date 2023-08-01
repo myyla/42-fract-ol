@@ -6,11 +6,12 @@
 /*   By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/24 17:14:34 by amtouham          #+#    #+#             */
-/*   Updated: 2023/07/30 09:02:39 by amtouham         ###   ########.fr       */
+/*   Updated: 2023/08/01 15:35:07 by amtouham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "fractol.h"
+
 
 static void	my_mlx_pixel_put(t_data *data, int x, int y, int color)
 {
@@ -29,9 +30,9 @@ static void	generate_fractal(t_data *data, int x, int y)
 	else if (data->set == JULIA)
 	 	value = julia(data,init_x(x, data->max_x, data->min_x),
 				init_y(y, data->max_y, data->min_y));
-	// else
-	// 	value = kosh(init_x(x, data->max_x, data->min_x),
-	// 			init_coord(y, data->max_y, data->min_y));
+	else if (data->set == TRICORN)
+	 	value = tricorn(data,init_x(x, data->max_x, data->min_x),
+				init_y(y, data->max_y, data->min_y));
 	my_mlx_pixel_put(data, x, y, set_pixel_color(data, value, x, y, data->color));
 }
 

@@ -6,7 +6,7 @@
 /*   By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/29 08:32:10 by amtouham          #+#    #+#             */
-/*   Updated: 2023/07/30 07:46:17 by amtouham         ###   ########.fr       */
+/*   Updated: 2023/08/01 12:07:54 by amtouham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int	press_key(int keycode, t_data *data)
 	key_lrud(keycode, data);
 	if (keycode == 8)
 	{
-		data->color_index += 10;
+		color_key(data);
 		render(data);
 	}
 	return (0);

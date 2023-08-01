@@ -6,7 +6,7 @@
 /*   By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 10:12:46 by amtouham          #+#    #+#             */
-/*   Updated: 2023/07/30 09:01:49 by amtouham         ###   ########.fr       */
+/*   Updated: 2023/08/01 16:31:55 by amtouham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,12 @@ void	initialize(t_data *data)
 	data->mlx_win = mlx_new_window(data->mlx, WINDOW_WIDTH, WINDOW_HEIGHT, "FRACT'OL");
 	data->img = mlx_new_image(data->mlx, WINDOW_WIDTH, WINDOW_HEIGHT);
 	data->addr = mlx_get_data_addr(data->img, &data->bits_per_pixel, &data->line_length, &data->endian);
-	data->iter = 100;
+	data->iter = 60;
 	data->min_x = -2.0;
 	data->max_x = 2.0;
 	data->min_y = -2.0;
 	data->max_y = 2.0;
-	data->my_color = 16724019;
-	data->color_index = 1;
+	data->color = 0;
 	data->zoom = 0.5;
 	data->key_lrud = 0.5;
 }

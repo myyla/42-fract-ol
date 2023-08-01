@@ -38,7 +38,7 @@
 		By changing the value of the threshold, you can include or exclude more points in the set.
 																																				
 	/*+++++++++++++++++++++++++++++++++++++++++++++++            CONCLUSION             +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-																																				*/
+	
 	/*	Increasing the number of iterations will result in a more detailed set, but will also increase the computation time. 
 		Decreasing the number of iterations will result in a less detailed set, but will reduce the computation time.
 		Therefore, by adjusting the values of the threshold and maximum number of iterations in this code, you can generate 
@@ -78,3 +78,32 @@
 					// color the pixel based on the number of iterations
 				}
 			}
+	--------------------------------tried an implementation of koch snowflake----------------------------
+			// void kosh(t_data *data, double x1, double y1,double x2, double y2, int iter)
+			// {
+			// 	double x3;
+			// 	double y3;
+			// 	double x4;
+			// 	double y4;
+			// 	double x5;
+			// 	double y5;
+			// 	double angle;
+
+			// 	angle = M_PI / 3.0;
+			// 	my_mlx_line_put(data, x1, y1, data->my_color, x2);
+			// 	if(iter == 0)
+			// 		return;
+			// 	else
+			// 	{
+			// 		x3 = (2.0 * x1 + x2) / 3.0;
+			// 		y3 = (2.0 * y1 + y2) / 3.0;
+			//         x4 = (x1 + 2.0 * x2) / 3.0;
+			//         y4 = (y1 + 2.0 * y2) / 3.0;
+			//         x5 = x3 + (x4 - x3) * cos(angle) + (y4 - y3) * sin(angle);
+			//         y5 = y3 - (x4 - x3) * sin(angle) + (y4 - y3) * cos(angle);
+			// 		kosh(data, x1, y1, x3, y3, iter - 1);
+			//         kosh(data, x3, y3, x5, y5, iter - 1);
+			//         kosh(data, x5, y5, x4, y4, iter - 1);
+			//         kosh(data, x4, y4, x2, y2, iter - 1);
+			// 	}
+			// }
