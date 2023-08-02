@@ -6,7 +6,7 @@
 /*   By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/24 15:06:09 by amtouham          #+#    #+#             */
-/*   Updated: 2023/08/02 10:09:00 by amtouham         ###   ########.fr       */
+/*   Updated: 2023/08/02 11:23:59 by amtouham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void	color_key(t_data *data)
 		(i == 3) && (data->fctl = 0.25) && (data->pctl = 1.5);
 		(i == 4) && (data->fctl = 0.25) && (data->pctl = 1.4);
 		(i == 5) && (data->fctl = 0.25) && (data->pctl = 2.0);
-		(i == 7) && (data->fctl = 0.2) && (data->pctl = 2.0);
+		(i == 6) && (data->fctl = 0.2) && (data->pctl = 2.0);
 		i++;
 	}
 }

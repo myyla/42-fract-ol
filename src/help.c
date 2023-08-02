@@ -6,7 +6,7 @@
 /*   By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 19:51:55 by amtouham          #+#    #+#             */
-/*   Updated: 2023/08/02 10:44:14 by amtouham         ###   ########.fr       */
+/*   Updated: 2023/08/02 11:39:24 by amtouham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ int	help_msg(void)
 	ft_putendl_fd("\033[1;33m \t* For Julia, you may specify starting values!", 1);
 	ft_putendl_fd("\033[1;33m \t* Values must be between -2.0 and 2.0 and must contain a decimal point.", 1);
 	ft_putendl_fd("\033[1;33m \t* Usage example: \e[0m ./fractol julia 0.285 0.01\n", 1);
-	return(exit (0),0);
+	exit (1);
 }

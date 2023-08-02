@@ -6,7 +6,7 @@
 #    By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/20 10:32:25 by amtouham          #+#    #+#              #
-#    Updated: 2023/08/02 11:05:25 by amtouham         ###   ########.fr        #
+#    Updated: 2023/08/02 11:50:32 by amtouham         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ MLX			= -lmlx -framework OpenGL -framework AppKit
 HEADER 		= src/fractol.h
 
 # Sources
-SRCS			= src/color.c src/fractol.c src/help.c src/hook_key.c src/hook_mouse.c src/init.c src/render.c src/sets.c src/utils.c 
+SRCS			= src/color.c src/float_atoi.c src/fractol.c src/help.c src/hook_key.c src/hook_mouse.c src/init.c src/render.c src/sets.c src/utils.c 
 
 # Objects
 OBJS		=  $(SRCS:.c=.o)
