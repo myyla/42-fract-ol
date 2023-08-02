@@ -6,7 +6,7 @@
 /*   By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 12:46:24 by amtouham          #+#    #+#             */
-/*   Updated: 2023/08/02 11:20:09 by amtouham         ###   ########.fr       */
+/*   Updated: 2023/08/02 12:50:24 by amtouham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	main(int ac, char **av)
 {
 	t_data	data;
-	
+
 	if (ac == 1)
 		help_msg();
 	if (ac == 2 && !ft_strncmp("mandelbrot", av[1], 10))
@@ -25,12 +25,12 @@ int	main(int ac, char **av)
 	else if (ac == 2 && !ft_strncmp("tricorn", av[1], 7))
 		data.set = TRICORN;
 	else if (ac == 4 && !ft_strncmp("julia", av[1], 5))
-		{
-			data.set = JULIA;
-			if (!ft_strchr(av[2], '.') || !ft_strchr(av[3], '.'))
-				help_msg();
-			get_julia_c_values(&data,av);
-		}
+	{
+		data.set = JULIA;
+		if (!ft_strchr(av[2], '.') || !ft_strchr(av[3], '.'))
+			help_msg();
+		get_julia_c_values(&data, av);
+	}
 	else
 		help_msg();
 	initialize(&data);

@@ -6,12 +6,12 @@
 /*   By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 06:13:41 by amtouham          #+#    #+#             */
-/*   Updated: 2023/08/02 11:06:20 by amtouham         ###   ########.fr       */
+/*   Updated: 2023/08/02 12:53:56 by amtouham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FRACTOL_H
-#define FRACTOL_H
+# define FRACTOL_H
 
 # include "mlx.h"
 # include <math.h>
@@ -34,26 +34,26 @@ typedef struct s_zpoint{
 	double	b;
 }t_zpoint;
 
-typedef struct	s_data {
-	void	*mlx;
-	void	*mlx_win;
-	void	*img;
-	char	*addr;
-	double	min_x;
-	double	max_x;
-	double	min_y;
-	double	max_y;
-	double	zoom;
-	double	key_lrud;
-	double	fctl;
-	double	pctl;
-	int		bits_per_pixel;
-	int		color;
-	int		endian;
-	int		iter;
-	int		line_length;
-	int		set;
-	t_zpoint julia_c;
+typedef struct s_data{
+	void		*mlx;
+	void		*mlx_win;
+	void		*img;
+	char		*addr;
+	double		min_x;
+	double		max_x;
+	double		min_y;
+	double		max_y;
+	double		zoom;
+	double		key_lrud;
+	double		fctl;
+	double		pctl;
+	int			bits_per_pixel;
+	int			color;
+	int			endian;
+	int			iter;
+	int			line_length;
+	int			set;
+	t_zpoint	julia_c;
 }t_data;
 
 /*	Functions' Prototypes	*/
@@ -61,15 +61,15 @@ char	*ft_strchr(const char *s, int c);
 double	ft_float_atoi(char *str);
 double	init_x(double x, double max_x, double min_x);
 double	init_y(double y, double max_y, double min_y);
-int	close_window(t_data *data);
-int	ft_strncmp(const char *s1, const char *s2, size_t n);
-int	julia(t_data *data, double a, double b);
-int	help_msg(void);
-int mandelbrot(t_data *data, double a, double b);
-int	press_key(int keycode, t_data *data);
-int set_pixel_color(t_data *data, int value, int color);
-int scroll_updown(int keycode, int x, int y, t_data *data);
-int tricorn(t_data *data,double a, double b);
+int		close_window(t_data *data);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
+int		julia(t_data *data, double a, double b);
+int		help_msg(void);
+int		mandelbrot(t_data *data, double a, double b);
+int		press_key(int keycode, t_data *data);
+int		set_pixel_color(t_data *data, int value, int color);
+int		scroll_updown(int keycode, int x, int y, t_data *data);
+int		tricorn(t_data *data, double a, double b);
 size_t	ft_strlen(const char *s);
 void	color_key(t_data *data);
 void	ft_putendl_fd(char *s, int fd);

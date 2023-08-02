@@ -6,7 +6,7 @@
 #    By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/20 10:32:25 by amtouham          #+#    #+#              #
-#    Updated: 2023/08/02 11:50:32 by amtouham         ###   ########.fr        #
+#    Updated: 2023/08/02 13:06:42 by amtouham         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,10 +41,6 @@ OBJS		=  $(SRCS:.c=.o)
 
 $(NAME): $(OBJS)
 	@$(CC) $(OBJS) $(FLAGS) $(MLX) -o $(NAME)
-
-
-all: $(NAME)
-	@echo  "$(BLUE)Building done successfull ✅...$(BLUE)"
 	@echo "\n\033[1;33m+----------------------------------------------------------------------+";
 	@echo "\033[1;33m|                         FRACT'OL CONTROLS                            |";
 	@echo "\033[1;33m+----------------------------------------------------------------------+";
@@ -64,6 +60,11 @@ all: $(NAME)
 	@echo "\033[1;33m \t* For Julia, you may specify starting values!";
 	@echo "\033[1;33m \t* Values must be between -2.0 and 2.0 and must contain a decimal point.";
 	@echo "\033[1;33m \t* Usage example: \033[0;0m ./fractol julia 0.285 0.01\n";
+
+
+all: $(NAME)
+	@echo  "$(BLUE)Building done successfull ✅...$(BLUE)"
+
 
 bonus: all
 

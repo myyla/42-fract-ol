@@ -6,11 +6,11 @@
 /*   By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/29 08:32:10 by amtouham          #+#    #+#             */
-/*   Updated: 2023/08/02 11:17:46 by amtouham         ###   ########.fr       */
+/*   Updated: 2023/08/02 13:05:51 by amtouham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "fractol.h"
+#include "fractol.h"
 
 static void	key_lrud(int keycode, t_data *data )
 {
@@ -38,9 +38,13 @@ static void	key_lrud(int keycode, t_data *data )
 		data->min_y -= data->key_lrud;
 		render(data);
 	}
-	else if(keycode == 34)
+}
+
+static void	key_zoom(int keycode, t_data *data)
+{
+	if (keycode == 34)
 		zoom_in(data, 250, 250);
-	else if(keycode == 31)
+	else if (keycode == 31)
 		zoom_out(data, 250, 250);
 }
 
@@ -48,27 +52,28 @@ int	press_key(int keycode, t_data *data)
 {
 	if (keycode == 53)
 		close_window(data);
-	key_lrud(keycode, data);
 	if (keycode == 49)
 	{
 		color_key(data);
 		render(data);
 	}
 	if (keycode == 83)
-		{
-			data->set = MANDELBROT;
-			render(data);
-		}
+	{
+		data->set = MANDELBROT;
+		render(data);
+	}
 	if (keycode == 84)
-		{
-			data->set = JULIA;
-			render(data);
-		}
+	{
+		data->set = JULIA;
+		render(data);
+	}
 	if (keycode == 85)
-		{
-			data->set = TRICORN;
-			render(data);
-		}
+	{
+		data->set = TRICORN;
+		render(data);
+	}
+	key_lrud(keycode, data);
+	key_zoom(keycode, data);
 	return (0);
 }
 

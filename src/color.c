@@ -6,30 +6,32 @@
 /*   By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/24 15:06:09 by amtouham          #+#    #+#             */
-/*   Updated: 2023/08/02 11:23:59 by amtouham         ###   ########.fr       */
+/*   Updated: 2023/08/02 12:52:39 by amtouham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "fractol.h"
+#include "fractol.h"
 
-int set_pixel_color(t_data *data, int value, int color)
+int	set_pixel_color(t_data *data, int value, int color)
 {
-	int r;
-	int g;
-	int b;
-	
+	int	r;
+	int	g;
+	int	b;
+
 	if (value >= data->iter)
-		return(0);
+		return (0);
 	else if (!value)
 		return (0);
 	else
-		{
-			b = (int)((1 + sin(data->fctl * value + data->pctl)) / 2 * 40.9 * (255/40));
-			r = (int)((1 + sin(data->fctl * value)) / 2 * 40.7 * (255/40));
-			g = (int)((1 + sin(data->fctl * value + (data->pctl * 4.0))) / 2 * 40.0 * (255/40));
-			color = (r << 16) | (g << 8) | b;
-		}
-	return(color);
+	{
+		b = (int)((1 + sin(data->fctl * value + data->pctl)) \
+			/ 2 * 40.9 * (255 / 40));
+		r = (int)((1 + sin(data->fctl * value)) / 2 * 40.7 * (255 / 40));
+		g = (int)((1 + sin(data->fctl * value + (data->pctl * 4.0))) \
+			/ 2 * 40.0 * (255 / 40));
+		color = (r << 16) | (g << 8) | b;
+	}
+	return (color);
 }
 
 void	color_key(t_data *data)

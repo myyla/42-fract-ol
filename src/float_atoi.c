@@ -6,18 +6,18 @@
 /*   By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 11:49:40 by amtouham          #+#    #+#             */
-/*   Updated: 2023/08/02 11:51:55 by amtouham         ###   ########.fr       */
+/*   Updated: 2023/08/02 12:51:10 by amtouham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "fractol.h"
+#include "fractol.h"
 
 static double	getint(char *str)
 {
 	int			i;
 	int			j;
 	int			s;
-	double	res;
+	double		res;
 
 	i = 0;
 	s = 1;
@@ -38,12 +38,13 @@ static double	getint(char *str)
 *  while digit we do the equation to count the fractional part 
 *  if the loop ends we check if it's the end of the string .. if not error
 */
+
 static double	getfrac(char *str)
 {
-	int 		i;
-	double	res;
+	int			i;
+	double		res;
 	double		div;
-	
+
 	i = 0;
 	res = 0;
 	div = 0.1;
@@ -61,14 +62,12 @@ static double	getfrac(char *str)
 	return (res);
 }
 
-double ft_float_atoi(char *str)
+double	ft_float_atoi(char *str)
 {
 	double	res1;
 	double	res2;
-	
+
 	res1 = getint(str);
-	//printf("[%f]\n", res1);
 	res2 = getfrac(str);
-	//printf("[%f]\n", res2);
 	return (res1 + res2);
 }
