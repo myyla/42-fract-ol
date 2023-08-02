@@ -6,7 +6,7 @@
 /*   By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 03:07:35 by amtouham          #+#    #+#             */
-/*   Updated: 2023/08/02 12:33:47 by amtouham         ###   ########.fr       */
+/*   Updated: 2023/08/02 15:35:47 by amtouham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,12 @@ void	ft_putendl_fd(char *s, int fd)
 	write(fd, "\n", 1);
 }
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_strcmp(const char *s1, const char *s2)
 {
 	size_t	i;
 
 	i = 0;
-	if (n <= 0)
-		return (0);
-	n--;
-	while ((s1[i] == s2[i]) && s1[i] && i < n)
+	while ((s1[i] == s2[i]) && s1[i])
 		i++;
 	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }

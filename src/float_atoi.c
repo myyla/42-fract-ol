@@ -6,32 +6,31 @@
 /*   By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 11:49:40 by amtouham          #+#    #+#             */
-/*   Updated: 2023/08/02 12:51:10 by amtouham         ###   ########.fr       */
+/*   Updated: 2023/08/02 16:38:06 by amtouham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-static double	getint(char *str)
+static double	getint(char *str, int *s)
 {
 	int			i;
 	int			j;
-	int			s;
 	double		res;
 
 	i = 0;
-	s = 1;
+	*s = 1;
 	res = 0;
 	while ((str[i] > 8 && str[i] < 14) || str[i] == 32)
 		i++;
 	if (str[i] == '-' || str[i] == '+')
-		s = 1 - 2 * (str[i++] == '-');
+		*s = 1 - 2 * (str[i++] == '-');
 	j = i;
 	while (str[i] && str[i] != '.' && str[i] >= '0' && str[i] <= '9')
 		res = 10.0 * res + str[i++] - '0';
 	if (j == i)
 		help_msg();
-	return (res * s);
+	return (res);
 }
 
 /* First char after . should be digit .. if not error
@@ -66,8 +65,9 @@ double	ft_float_atoi(char *str)
 {
 	double	res1;
 	double	res2;
+	int		sign;
 
-	res1 = getint(str);
+	res1 = getint(str, &sign);
 	res2 = getfrac(str);
-	return (res1 + res2);
+	return ((res1 + res2) * sign);
 }

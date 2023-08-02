@@ -6,7 +6,7 @@
 /*   By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 12:46:24 by amtouham          #+#    #+#             */
-/*   Updated: 2023/08/02 12:50:24 by amtouham         ###   ########.fr       */
+/*   Updated: 2023/08/02 16:35:53 by amtouham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,16 @@ int	main(int ac, char **av)
 {
 	t_data	data;
 
+	initialize(&data);
 	if (ac == 1)
 		help_msg();
-	if (ac == 2 && !ft_strncmp("mandelbrot", av[1], 10))
+	if (ac == 2 && !ft_strcmp("mandelbrot", av[1]))
 		data.set = MANDELBROT;
-	else if (ac == 2 && !ft_strncmp("julia", av[1], 5))
+	else if (ac == 2 && !ft_strcmp("julia", av[1]))
 		data.set = JULIA;
-	else if (ac == 2 && !ft_strncmp("tricorn", av[1], 7))
+	else if (ac == 2 && !ft_strcmp("tricorn", av[1]))
 		data.set = TRICORN;
-	else if (ac == 4 && !ft_strncmp("julia", av[1], 5))
+	else if (ac == 4 && !ft_strcmp("julia", av[1]))
 	{
 		data.set = JULIA;
 		if (!ft_strchr(av[2], '.') || !ft_strchr(av[3], '.'))
@@ -33,7 +34,6 @@ int	main(int ac, char **av)
 	}
 	else
 		help_msg();
-	initialize(&data);
 	render(&data);
 	mlx_mouse_hook(data.mlx_win, scroll_updown, &data);
 	mlx_hook(data.mlx_win, 2, 0, press_key, &data);

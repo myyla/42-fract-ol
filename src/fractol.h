@@ -6,7 +6,7 @@
 /*   By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 06:13:41 by amtouham          #+#    #+#             */
-/*   Updated: 2023/08/02 12:53:56 by amtouham         ###   ########.fr       */
+/*   Updated: 2023/08/02 15:36:36 by amtouham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ double	ft_float_atoi(char *str);
 double	init_x(double x, double max_x, double min_x);
 double	init_y(double y, double max_y, double min_y);
 int		close_window(t_data *data);
-int		ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_strcmp(const char *s1, const char *s2);
 int		julia(t_data *data, double a, double b);
 int		help_msg(void);
 int		mandelbrot(t_data *data, double a, double b);
