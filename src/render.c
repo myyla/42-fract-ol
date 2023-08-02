@@ -6,7 +6,7 @@
 /*   By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/24 17:14:34 by amtouham          #+#    #+#             */
-/*   Updated: 2023/08/01 15:35:07 by amtouham         ###   ########.fr       */
+/*   Updated: 2023/08/02 06:32:52 by amtouham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,10 @@ static void	generate_fractal(t_data *data, int x, int y)
 	else if (data->set == JULIA)
 	 	value = julia(data,init_x(x, data->max_x, data->min_x),
 				init_y(y, data->max_y, data->min_y));
-	else if (data->set == TRICORN)
+	else
 	 	value = tricorn(data,init_x(x, data->max_x, data->min_x),
 				init_y(y, data->max_y, data->min_y));
-	my_mlx_pixel_put(data, x, y, set_pixel_color(data, value, x, y, data->color));
+	my_mlx_pixel_put(data, x, y, set_pixel_color(data, value, data->color));
 }
 
 void	render(t_data *data)
