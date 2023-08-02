@@ -6,7 +6,7 @@
 /*   By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 10:12:46 by amtouham          #+#    #+#             */
-/*   Updated: 2023/08/02 07:03:34 by amtouham         ###   ########.fr       */
+/*   Updated: 2023/08/02 09:47:28 by amtouham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ void	initialize(t_data *data)
 	data->min_y = -2.0;
 	data->max_y = 2.0;
 	data->color = 0;
-	data->cctl = 0.1;
+	data->fctl = 0.1;
+	data->pctl = 2.0;
 	data->zoom = 0.5;
 	data->key_lrud = 0.5;
 }

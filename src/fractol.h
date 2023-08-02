@@ -6,7 +6,7 @@
 /*   By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 06:13:41 by amtouham          #+#    #+#             */
-/*   Updated: 2023/08/02 08:04:46 by amtouham         ###   ########.fr       */
+/*   Updated: 2023/08/02 10:35:30 by amtouham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,8 @@ typedef struct	s_data {
 	double	max_y;
 	double	zoom;
 	double	key_lrud;
-	double	cctl;
+	double	fctl;
+	double	pctl;
 	int		bits_per_pixel;
 	int		color;
 	int		endian;

@@ -6,13 +6,13 @@
 #    By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/20 10:32:25 by amtouham          #+#    #+#              #
-#    Updated: 2023/08/02 06:30:56 by amtouham         ###   ########.fr        #
+#    Updated: 2023/08/02 10:44:01 by amtouham         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 ### COLORS ###
-GREEN       = \033[1;32m
-CYAN        = \033[1;36m
+BLUE        = \033[0;36m
+RED        = \033[0;31m
 
 # Program name
 NAME	= fractol
@@ -36,25 +36,43 @@ OBJS		=  $(SRCS:.c=.o)
 # Rules
 
 %.o : %.c $(HEADER)
-	@echo "$(GREEN)Building fractol⏳️...$(CYAN)"
+	@echo "$(BLUE)Building fractol ⏳️...$(BLUE)"
 	@$(CC) $(FLAGS) -c -o $@ $<
-	@echo "$(GREEN)Fractol ready!$(CYAN)"
 
 $(NAME): $(OBJS)
 	@$(CC) $(OBJS) $(FLAGS) $(MLX) -o $(NAME)
 
 
 all: $(NAME)
-	@echo  "$(GREEN)Building done successfully✅...$(CYAN)"
+	@echo  "$(BLUE)Building done successfull ✅...$(BLUE)"
+	@echo "\n\033[1;33m+----------------------------------------------------------------------+";
+	@echo "\033[1;33m|                         FRACT'OL CONTROLS                            |";
+	@echo "\033[1;33m+----------------------------------------------------------------------+";
+	@echo "\033[1;33m| Switch Fractals.\033[0;0m\t\t1, 2, 3                                \033[1;33m|";
+	@echo "\033[1;33m| Zoom In & Out \033[0;0m\t\t+/- or Scroll Wheel                    \033[1;33m|";
+	@echo "\033[1;33m| Change Color Scale \033[0;0m\t\tSpacebar                               \033[1;33m|";
+	@echo "\033[1;33m| Quit \033[0;0m\t\t\t\tEsc or Close button                    \033[1;33m|";
+	@echo "\033[1;33m+----------------------------------------------------------------------+";
+	@echo "\033[1;33m|                        FRACT'OL INPUTS MENU                          |";
+	@echo "\033[1;33m+----------------------------------------------------------------------+";
+	@echo "\033[1;33m| 1.\033[0m For Mandelbrot set, Plz Use          :  \033[36m./fractol mandelbrot\033[0;0m\033[1;33m      |";
+	@echo "\033[1;33m| 2.\033[0;0m For Default Julia set, Plz Use       :  \033[36m./fractol julia\033[0;0m\033[1;33m           |";
+	@echo "\033[1;33m| 3.\033[0;0m For A Specified Julia set, Plz Use   :  \033[36m./fractol julia x y\033[0;0m\033[1;33m       | ";
+	@echo "\033[1;33m| 4.\033[0;0m For Tricorn set, Plz Use             :  \033[36m./fractol tricorn\033[0;0m\033[1;33m         |";
+	@echo "\033[1;33m+----------------------------------------------------------------------+";
+	@echo "\n\033[1;33m- Notes ::";
+	@echo "\033[1;33m \t* For Julia, you may specify starting values!";
+	@echo "\033[1;33m \t* Values must be between -2.0 and 2.0 and must contain a decimal point.";
+	@echo "\033[1;33m \t* Usage example: \033[0;0m ./fractol julia 0.285 0.01\n";
 
 bonus: all
 
 clean:
-	@echo "$(CYAN)Removing .o object files🗑...$(CYAN)"
+	@echo "$(RED)Removing .o object files🗑...$(BLUE)"
 	@rm -rf $(OBJS)
 
 fclean: clean
-	@echo "$(GREEN)Removing fractol💣...$(CYAN)"
+	@echo "$(RED)Removing fractol💣...$(BLUE)"
 	@rm -f $(NAME)
 
 re: fclean all
