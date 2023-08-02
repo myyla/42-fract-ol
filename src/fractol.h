@@ -6,7 +6,7 @@
 /*   By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 06:13:41 by amtouham          #+#    #+#             */
-/*   Updated: 2023/08/02 07:04:34 by amtouham         ###   ########.fr       */
+/*   Updated: 2023/08/02 08:04:46 by amtouham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,11 +47,11 @@ typedef struct	s_data {
 	double	key_lrud;
 	double	cctl;
 	int		bits_per_pixel;
-	int		line_length;
-	int		endian;
 	int		color;
-	int		set;
+	int		endian;
 	int		iter;
+	int		line_length;
+	int		set;
 	t_zpoint julia_c;
 }t_data;
 
