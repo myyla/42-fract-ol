@@ -6,7 +6,7 @@
 #    By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/20 10:32:25 by amtouham          #+#    #+#              #
-#    Updated: 2023/08/02 13:06:42 by amtouham         ###   ########.fr        #
+#    Updated: 2023/08/02 13:17:22 by amtouham         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,7 +64,6 @@ $(NAME): $(OBJS)
 
 all: $(NAME)
 	@echo  "$(BLUE)Building done successfull ✅...$(BLUE)"
-
 
 bonus: all
 
