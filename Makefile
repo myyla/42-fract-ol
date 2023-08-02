@@ -6,7 +6,7 @@
 #    By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/20 10:32:25 by amtouham          #+#    #+#              #
-#    Updated: 2023/08/02 10:44:01 by amtouham         ###   ########.fr        #
+#    Updated: 2023/08/02 11:05:25 by amtouham         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,9 +49,9 @@ all: $(NAME)
 	@echo "\033[1;33m|                         FRACT'OL CONTROLS                            |";
 	@echo "\033[1;33m+----------------------------------------------------------------------+";
 	@echo "\033[1;33m| Switch Fractals.\033[0;0m\t\t1, 2, 3                                \033[1;33m|";
-	@echo "\033[1;33m| Zoom In & Out \033[0;0m\t\t+/- or Scroll Wheel                    \033[1;33m|";
+	@echo "\033[1;33m| Zoom In & Out \033[0;0m\t\ti/o or Scroll Wheel                    \033[1;33m|";
 	@echo "\033[1;33m| Change Color Scale \033[0;0m\t\tSpacebar                               \033[1;33m|";
-	@echo "\033[1;33m| Quit \033[0;0m\t\t\t\tEsc or Close button                    \033[1;33m|";
+	@echo "\033[1;33m| Quit \033[0;0m\t\t\t\tEsc or Close Button                    \033[1;33m|";
 	@echo "\033[1;33m+----------------------------------------------------------------------+";
 	@echo "\033[1;33m|                        FRACT'OL INPUTS MENU                          |";
 	@echo "\033[1;33m+----------------------------------------------------------------------+";

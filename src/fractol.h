@@ -6,7 +6,7 @@
 /*   By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 06:13:41 by amtouham          #+#    #+#             */
-/*   Updated: 2023/08/02 10:35:30 by amtouham         ###   ########.fr       */
+/*   Updated: 2023/08/02 11:06:20 by amtouham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,5 +76,7 @@ void	ft_putendl_fd(char *s, int fd);
 void	get_julia_c_values(t_data *data, char **av);
 void	initialize(t_data *data);
 void	render(t_data *data);
+void	zoom_in(t_data	*data, int x, int y);
+void	zoom_out(t_data	*data, int x, int y);
 
 #endif

@@ -6,13 +6,13 @@
 /*   By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/30 07:43:27 by amtouham          #+#    #+#             */
-/*   Updated: 2023/07/30 09:47:47 by amtouham         ###   ########.fr       */
+/*   Updated: 2023/08/02 10:55:57 by amtouham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-static void zoom_in(t_data	*data, int x, int y)
+void zoom_in(t_data	*data, int x, int y)
 {
 	double new_x;
 	double new_y;		
@@ -28,7 +28,7 @@ static void zoom_in(t_data	*data, int x, int y)
 	render(data);
 }
 
-static void	zoom_out(t_data	*data, int x, int y)
+void	zoom_out(t_data	*data, int x, int y)
 {
 	double new_x;
 	double new_y;

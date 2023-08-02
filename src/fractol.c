@@ -6,7 +6,7 @@
 /*   By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 12:46:24 by amtouham          #+#    #+#             */
-/*   Updated: 2023/08/02 10:35:20 by amtouham         ###   ########.fr       */
+/*   Updated: 2023/08/02 11:20:09 by amtouham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,7 @@ int	main(int ac, char **av)
 	if (ac == 2 && !ft_strncmp("mandelbrot", av[1], 10))
 		data.set = MANDELBROT;
 	else if (ac == 2 && !ft_strncmp("julia", av[1], 5))
-		{
-			data.set = JULIA;
-			data.julia_c.a = -0.8;
-			data.julia_c.b = 0.156;
-		}
+		data.set = JULIA;
 	else if (ac == 2 && !ft_strncmp("tricorn", av[1], 7))
 		data.set = TRICORN;
 	else if (ac == 4 && !ft_strncmp("julia", av[1], 5))
