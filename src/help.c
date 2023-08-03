@@ -6,13 +6,13 @@
 /*   By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 19:51:55 by amtouham          #+#    #+#             */
-/*   Updated: 2023/08/02 13:12:39 by amtouham         ###   ########.fr       */
+/*   Updated: 2023/08/03 10:44:34 by amtouham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-int	help_msg(void)
+void	help_msg(void)
 {
 	ft_putendl_fd("\033[0;31m\n\t\t\t    UNVALID INPUT !", 1);
 	ft_putendl_fd("\n\033[1;33m+------------------------------------------\
@@ -37,6 +37,6 @@ values!", 1);
 	ft_putendl_fd("\033[1;33m \t* Values must be between -2.0 and 2.0\
 and must contain a decimal point.", 1);
 	ft_putendl_fd("\033[1;33m \t* Usage example: \e[0m ./fractol julia\
-0.285 0.01\n", 1);
-	exit (1);
+ 0.285 0.01\n", 1);
+	exit(EXIT_FAILURE);
 }

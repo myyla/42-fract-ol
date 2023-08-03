@@ -6,7 +6,7 @@
 /*   By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 06:13:41 by amtouham          #+#    #+#             */
-/*   Updated: 2023/08/02 15:36:36 by amtouham         ###   ########.fr       */
+/*   Updated: 2023/08/03 10:30:47 by amtouham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,6 @@ double	init_y(double y, double max_y, double min_y);
 int		close_window(t_data *data);
 int		ft_strcmp(const char *s1, const char *s2);
 int		julia(t_data *data, double a, double b);
-int		help_msg(void);
 int		mandelbrot(t_data *data, double a, double b);
 int		press_key(int keycode, t_data *data);
 int		set_pixel_color(t_data *data, int value, int color);
@@ -74,6 +73,7 @@ size_t	ft_strlen(const char *s);
 void	color_key(t_data *data);
 void	ft_putendl_fd(char *s, int fd);
 void	get_julia_c_values(t_data *data, char **av);
+void	help_msg(void);
 void	initialize(t_data *data);
 void	render(t_data *data);
 void	zoom_in(t_data	*data, int x, int y);

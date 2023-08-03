@@ -6,15 +6,12 @@
 /*   By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 19:54:46 by amtouham          #+#    #+#             */
-/*   Updated: 2023/08/02 12:53:35 by amtouham         ###   ########.fr       */
+/*   Updated: 2023/08/03 09:46:59 by amtouham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-/*	The mandelbrot function takes two double arguments a 
-	and b representing the real
- 	and imaginary parts of a complex number*/
 int	mandelbrot(t_data *data, double a, double b)
 {
 	t_zpoint	z;
