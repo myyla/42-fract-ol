@@ -6,13 +6,13 @@
 /*   By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 12:46:24 by amtouham          #+#    #+#             */
-/*   Updated: 2023/08/03 11:10:00 by amtouham         ###   ########.fr       */
+/*   Updated: 2023/08/04 11:28:45 by amtouham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-void	ft_parse(t_data *data, int ac, char **av)
+static void	ft_parse(t_data *data, int ac, char **av)
 {
 	if (ac == 1)
 		help_msg();
