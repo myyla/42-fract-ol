@@ -6,7 +6,7 @@
 /*   By: amtouham <amtouham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/24 15:06:09 by amtouham          #+#    #+#             */
-/*   Updated: 2023/08/05 08:22:10 by amtouham         ###   ########.fr       */
+/*   Updated: 2023/08/05 08:25:11 by amtouham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	set_pixel_color(t_data *data, int value, int color)
 		return (0);
 	b = (int)((1 + sin(data->fctl * value + data->pctl)) \
 		/ 2 * 255);
-	r = (int)((1 + sin(data->fctl * value)) / 2 * 255 );
+	r = (int)((1 + sin(data->fctl * value)) / 2 * 255);
 	g = (int)((1 + sin(data->fctl * value + (data->pctl * 4.0))) \
 		/ 2 * 255);
 	color = (r << 16) | (g << 8) | b;
